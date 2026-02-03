@@ -1,56 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>DevOps Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Volkswagen | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
-      font-family: "Segoe UI", sans-serif;
       margin: 0;
-      padding: 0;
-      background: #0f172a;
-      color: #e5e7eb;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #111;
     }
+
     header {
-      background: #020617;
-      padding: 20px;
+      background-color: #001e50;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #001e50, #003a8f);
+      color: white;
+      padding: 80px 40px;
       text-align: center;
     }
-    section {
-      padding: 40px;
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
     }
-    h1, h2 {
-      color: #38bdf8;
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
     }
-    ul {
-      line-height: 1.8;
+
+    .section {
+      padding: 60px 40px;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    .cars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .car-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .car-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .car-card .info {
+      padding: 20px;
+    }
+
+    .car-card h3 {
+      margin: 0 0 10px;
+    }
+
+    footer {
+      background-color: #001e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Chandan – DevOps Engineer</h1>
-  <p>AWS | Terraform | Docker | Kubernetes</p>
+  <h1>Volkswagen</h1>
+  <nav>
+    <a href="#">Models</a>
+    <a href="#">Electric</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
-<section>
-  <h2>Skills</h2>
-  <ul>
-    <li>AWS (EC2, S3, EKS, CloudFront)</li>
-    <li>Terraform & Infrastructure as Code</li>
-    <li>Docker & Kubernetes</li>
-    <li>CI/CD (GitHub Actions, Jenkins)</li>
-  </ul>
+<section class="hero">
+  <h2>Drive the Future</h2>
+  <p>Explore the latest Volkswagen cars launched in the market</p>
 </section>
 
-<section>
-  <h2>Projects</h2>
-  <ul>
-    <li>Static website on AWS using Terraform</li>
-    <li>EKS cluster provisioning</li>
-    <li>CI/CD pipeline for microservices</li>
-  </ul>
+<section class="section">
+  <h2>Latest Volkswagen Cars</h2>
+
+  <div class="cars">
+    <div class="car-card">
+      <img src="images/taigun.jpg" alt="Volkswagen Taigun">
+      <div class="info">
+        <h3>Volkswagen Taigun</h3>
+        <p>Compact SUV with bold design and turbo performance.</p>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <img src="images/virtus.jpg" alt="Volkswagen Virtus">
+      <div class="info">
+        <h3>Volkswagen Virtus</h3>
+        <p>Premium sedan with advanced safety and comfort.</p>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <img src="images/tiguan.jpg" alt="Volkswagen Tiguan">
+      <div class="info">
+        <h3>Volkswagen Tiguan</h3>
+        <p>Luxury SUV with powerful performance and space.</p>
+      </div>
+    </div>
+
+    <div class="car-card">
+      <img src="images/id4.jpg" alt="Volkswagen ID.4">
+      <div class="info">
+        <h3>Volkswagen ID.4 (Electric)</h3>
+        <p>Fully electric SUV built for the future.</p>
+      </div>
+    </div>
+  </div>
 </section>
+
+<footer>
+  © 2026 Volkswagen Demo Site | Hosted on AWS S3 + CloudFront
+</footer>
 
 </body>
 </html>
